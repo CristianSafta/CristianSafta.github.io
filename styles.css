@@ -243,12 +243,12 @@ img {
   font-variant-numeric: tabular-nums;
 }
 
-.latency-note, .project-screenshot figcaption {
+.latency-note, .project-screenshot figcaption, .project-video figcaption {
   color: var(--muted);
   font-size: .875rem;
 }
 
-.project-screenshot {
+.project-screenshot, .project-video {
   margin-block: .4rem .25rem;
 }
 
@@ -259,8 +259,24 @@ img {
   border-radius: .25rem;
 }
 
-.project-screenshot figcaption {
+.project-screenshot figcaption, .project-video figcaption {
   margin-block-start: .35rem;
+}
+
+.project-video video {
+  display: block;
+  inline-size: auto;
+  block-size: min(64svh, 28rem);
+  max-inline-size: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  margin-inline: auto;
+  border: 1px solid var(--rule);
+  border-radius: .25rem;
+}
+
+.project-video figcaption {
+  text-align: center;
 }
 
 .profile-list {
@@ -319,7 +335,7 @@ img {
     margin-block-start: .5rem;
   }
 
-  .site-footer, .skip-link, .portrait, .entry-details:not([open]) {
+  .site-footer, .skip-link, .portrait, .entry-details:not([open]), .project-video video {
     display: none;
   }
 

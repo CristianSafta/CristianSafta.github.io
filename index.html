@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cristian Safta | Software Engineer</title>
-  <meta name="description" content="Cristian Safta, software engineer in Hong Kong and EPFL computer science graduate. Selected work on real-time systems, smart-home integrations, and retrieval-augmented generation.">
+  <meta name="description" content="Cristian Safta, software engineer in Hong Kong and EPFL graduate. Projects include Hop!, real-time smart-home systems, and applied AI research.">
   <meta name="theme-color" content="#171a19">
   <link rel="canonical" href="https://cristiansafta.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cristiansafta.github.io/">
   <meta property="og:title" content="Cristian Safta | Software Engineer">
-  <meta property="og:description" content="Software engineer in Hong Kong. Selected work on real-time systems, smart-home integrations, and retrieval-augmented generation.">
+  <meta property="og:description" content="Software engineer in Hong Kong. Selected work includes Hop!, a Unity mobile game, smart-home integrations, and applied AI research.">
   <meta property="og:image" content="https://cristiansafta.github.io/assets/cristian-safta.jpg">
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="1200">
   <meta property="og:image:alt" content="Portrait of Cristian Safta">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,6 +43,26 @@
     <section class="section" id="work" aria-labelledby="work-title">
       <h2 class="section-title" id="work-title">Selected work</h2>
       <ul class="entries" role="list">
+        <li class="entry" id="hop">
+          <div class="entry-heading">
+            <h3 class="entry-title">Hop! — a one-touch platformer</h3>
+            <p class="entry-context">Unity · <time datetime="2026-09">Sep 2026</time>–present</p>
+          </div>
+          <p>I published a Unity game for Android where you hold to charge and release to jump across a procedurally generated course. My C# landing code checks how much of the character’s footprint an irregular platform supports. Runs work offline, and players can share high scores through a leaderboard I built with Cloudflare Workers and D1.</p>
+          <ul class="link-list" aria-label="Hop! project links" role="list">
+            <li><a href="https://play.google.com/store/apps/details?id=com.hop.myapp">Hop! on Google Play</a></li>
+          </ul>
+          <details class="entry-details">
+            <summary>Watch gameplay (20 seconds)</summary>
+            <figure class="project-video">
+              <video controls playsinline preload="none" muted width="540" height="960" poster="assets/hop-gameplay.webp" aria-label="Hop! gameplay" aria-describedby="hop-video-description">
+                <source src="assets/hop-gameplay.mp4" type="video/mp4">
+                <a href="assets/hop-gameplay.mp4">Open the gameplay video (MP4)</a>
+              </video>
+              <figcaption id="hop-video-description">The player jumps between platforms, earning consecutive perfect landings in the classic and neon courses.</figcaption>
+            </figure>
+          </details>
+        </li>
         <li class="entry" id="screen-to-light">
           <div class="entry-heading">
             <h3 class="entry-title">Measuring screen-to-light latency</h3>
