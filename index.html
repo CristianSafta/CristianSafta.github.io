@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cristian Safta | Software Engineer</title>
+  <meta name="description" content="Cristian Safta, software engineer in Hong Kong and EPFL computer science graduate. Selected work on real-time systems, smart-home integrations, and retrieval-augmented generation.">
+  <meta name="theme-color" content="#f8f7f2">
+  <link rel="canonical" href="https://cristiansafta.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cristiansafta.github.io/">
+  <meta property="og:title" content="Cristian Safta | Software Engineer">
+  <meta property="og:description" content="Software engineer in Hong Kong. Selected work on real-time systems, smart-home integrations, and retrieval-augmented generation.">
+  <meta property="og:image" content="https://cristiansafta.github.io/assets/cristian-safta.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Portrait of Cristian Safta">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header page-width" id="top">
+    <a class="site-name" href="#top">Cristian Safta</a>
+    <nav aria-label="Primary">
+      <ul class="link-list" role="list">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="assets/cristian-safta-cv.pdf" aria-label="CV (PDF)">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-width" id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <h1 id="name">Cristian Safta</h1>
+        <p class="hero-intro">I’m a software engineer in Hong Kong with an MSc in Computer Science from EPFL. My work has taken me from measuring how fast a lightbulb reacts to a game to helping researchers trace AI answers back to video transcripts.</p>
+        <ul class="link-list" aria-label="Contact and CV" role="list">
+          <li><a href="mailto:saftakrist@gmail.com">Email</a></li>
+          <li><a href="https://github.com/CristianSafta">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/cristian-safta-4640a824a/">LinkedIn</a></li>
+          <li><a href="assets/cristian-safta-cv.pdf" download="Cristian-Safta-CV.pdf">Download CV (PDF)</a></li>
+        </ul>
+      </div>
+      <figure class="portrait">
+        <img src="assets/cristian-safta.jpg" width="800" height="1200" alt="Cristian Safta" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <h2 class="section-title" id="work-title">Selected work</h2>
+      <ul class="entries" role="list">
+        <li class="entry" id="screen-to-light">
+          <p class="entry-context">Logitech MSc thesis<br><time datetime="2026">2026</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Measuring screen-to-light latency</h3>
+            <p class="entry-description">I built a pipeline that captures on-screen events and uses Matter.js to drive smart lights over Wi-Fi. I measured end-to-end latency with photosensors and found that most of the delay came from the lights, particularly Wi-Fi power saving and firmware-controlled fades.</p>
+            <figure class="latency-figure">
+              <figcaption>Mean screen-to-light latency</figcaption>
+              <ul class="latency-rows" role="list">
+                <li class="latency-row">
+                  <span>Uncongested Wi-Fi</span>
+                  <span class="latency-track" aria-hidden="true"><span class="latency-bar" style="--bar-width: 58.3%"></span></span>
+                  <span class="latency-value">29.15 ms</span>
+                </li>
+                <li class="latency-row">
+                  <span>Competing traffic</span>
+                  <span class="latency-track" aria-hidden="true"><span class="latency-bar" style="--bar-width: 81.9%"></span></span>
+                  <span class="latency-value">40.95 ms</span>
+                </li>
+              </ul>
+              <p class="latency-note">About 113 Mbit/s of competing Wi-Fi traffic raised mean latency by 40%. Both bars use a 0–50 ms scale.</p>
+            </figure>
+            <details class="entry-details">
+              <summary>Experiment details</summary>
+              <p>I compared two runs per condition, generating background TCP traffic between a laptop and a phone on the same network. The longest observed response was 61 ms without congestion and 112.5 ms under load.</p>
+            </details>
+            <ul class="link-list" aria-label="Screen-to-light project links" role="list">
+              <li><a href="https://www.researchgate.net/publication/413651607_Evaluating_a_JavaScript_Matter_Stack_for_Gaming_Room_Lighting_Control">Read the thesis</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry" id="video-research">
+          <p class="entry-context">EPFL &amp; Idiap research<br><time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Finding evidence in 13,022 videos</h3>
+            <p class="entry-description">I built a retrieval-augmented generation pipeline to study how French-language YouTube videos discuss the UN Sustainable Development Goals. Rephrasing each question before searching the transcripts raised the benchmark score from 3.68 to 3.96 out of 5 across 15 questions. Tracing answers back to their sources remained the main reliability bottleneck.</p>
+            <p class="entry-description">I was first author and presented the paper in Amsterdam at the ICDAR workshop at ACM ICMR 2026.</p>
+            <ul class="link-list" aria-label="Video research links" role="list">
+              <li><a href="https://publications.idiap.ch/attachments/papers/2026/Bros_ICMR26-ICDAR_2026.pdf">Read the paper (PDF)</a></li>
+              <li><a href="assets/rag-semester-presentation.pdf">Semester presentation (PDF)</a></li>
+              <li><a href="https://github.com/CristianSafta/RAG_pipeline">View the pipeline code</a></li>
+              <li><a href="https://www.linkedin.com/posts/cristian-safta-4640a824a_rag-llm-informationretrieval-activity-7475834105776025601-zk_3">Conference recap</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry" id="home-assistant">
+          <p class="entry-context">Logitech integration<br><time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Home Assistant for Logi Options+</h3>
+            <p class="entry-description">I built an open-source C# plug-in that lets people control their smart-home devices with Logitech buttons and dials. It discovers Home Assistant devices and syncs their state in real time. The Marketplace beta reached 5,000+ installs.</p>
+            <details class="entry-details">
+              <summary>See my console layout</summary>
+              <figure class="project-screenshot">
+                <img src="assets/home-assistant-console.webp" width="1627" height="925" alt="Logi Options+ shows MX Creative Console keys for lights, switches, and blinds alongside the Home Assistant action settings." loading="lazy" decoding="async">
+                <figcaption>I shared this setup in my <a href="https://community.home-assistant.io/t/control-home-assistant-lights-switches-from-your-logitech-mx-devices-options-plugin/980268">Home Assistant Community post</a>.</figcaption>
+              </figure>
+            </details>
+            <ul class="link-list" aria-label="Home Assistant project links" role="list">
+              <li><a href="https://www.logitech.com/blog/2026/03/03/how-i-created-a-smart-home-solution-using-the-mx-creative-console/">Read my Logitech write-up</a></li>
+              <li><a href="https://github.com/Logitech/cto-HomeAssistantPlugin-OptionsPlus">View the plug-in code</a></li>
+              <li><a href="https://marketplace.logi.com/plugin/HomeAssistant/en">Marketplace listing</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry" id="nfos">
+          <p class="entry-context">EPFL DSLAB<br><time datetime="2023">2023</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Porting a passive network monitor to NFOS</h3>
+            <p class="entry-description">I adapted the C codebase of PRADS, a passive real-time network monitor, to the lab’s parallel network function runtime. I tested its main functionality on one and two cores and filed 11 runtime issues during the port.</p>
+            <ul class="link-list" aria-label="NFOS project links" role="list">
+              <li><a href="https://dslab.epfl.ch/pubs/nfos.pdf">Read about the NFOS runtime (PDF)</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry" id="draw-your-path">
+          <p class="entry-context">Android team project<br><time datetime="2023">2023</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">DrawYourPath</h3>
+            <p class="entry-description">On a team of six, I used Kotlin to build map previews for past runs and let runners share recorded routes in chat. I also connected friend search and friend lists to Firebase.</p>
+            <ul class="link-list" aria-label="DrawYourPath project links" role="list">
+              <li><a href="https://github.com/DrawYourPath/DrawYourPath">View the Android app code</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <h2 class="section-title" id="experience-title">Experience</h2>
+      <ul class="entries entries-compact" role="list">
+        <li class="entry">
+          <p class="entry-context"><time datetime="2025-08">Aug 2025</time>–<time datetime="2026-08">Aug 2026</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Logitech</h3>
+            <p class="entry-subtitle">Engineering Intern, Office of the CTO</p>
+            <p class="entry-description">I built a multi-device Wi-Fi and Matter testbed and prototyped smart-home controls for the MX Creative Console and Actions Ring.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="entry-context"><time datetime="2023-07">Jul</time>–<time datetime="2023-09">Sep 2023</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">Capital Ship Management</h3>
+            <p class="entry-subtitle">Software Development Intern</p>
+            <p class="entry-description">I worked with the finance team to build a React and MUI application for viewing and editing the company’s tax forms, connected to its existing back end.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Education</h2>
+      <ul class="entries entries-compact" role="list">
+        <li class="entry">
+          <p class="entry-context"><time datetime="2023">2023</time>–<time datetime="2026">2026</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">MSc in Computer Science, EPFL</h3>
+            <p class="entry-description">Focused on AI, networking, and data management, with a minor in Management, Technology and Entrepreneurship. Final grade 5.45/6, with 6/6 for the thesis and research project.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="entry-context"><time datetime="2020">2020</time>–<time datetime="2023">2023</time></p>
+          <div class="entry-content">
+            <h3 class="entry-title">BSc in Computer Science, EPFL</h3>
+            <p class="entry-description">Focused on software engineering, networking, and machine learning.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">A bit about me</h2>
+      <div class="about-copy">
+        <p>I grew up in Greece and started programming in Pascal at a school club. I was one of 20 students selected for Greece’s Informatics Olympiad preparation camp.</p>
+        <p>In Lausanne, I led five events for the Greek Students Association with more than 900 attendees across them. Away from a computer, I like windsurfing and skiing.</p>
+      </div>
+      <dl class="profile-list">
+        <dt>Languages</dt>
+        <dd>Greek and Romanian (native), English (C2), French (B2)</dd>
+      </dl>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <div>
+        <p><a href="mailto:saftakrist@gmail.com">saftakrist@gmail.com</a></p>
+        <ul class="link-list" aria-label="Profiles and CV" role="list">
+          <li><a href="https://github.com/CristianSafta">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/cristian-safta-4640a824a/">LinkedIn</a></li>
+          <li><a href="assets/cristian-safta-cv.pdf" download="Cristian-Safta-CV.pdf">Download CV (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width">
+    <p>Cristian Safta</p>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
