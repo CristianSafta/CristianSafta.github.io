@@ -17,7 +17,7 @@
   <meta property="og:image:alt" content="Portrait of Cristian Safta">
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,16 +27,24 @@
       <h1 id="name">Cristian Safta</h1>
       <p class="intro">I’m a software engineer in Hong Kong with an MSc in Computer Science from EPFL.</p>
     </div>
-    <img class="portrait" src="assets/cristian-safta.jpg" width="800" height="1200" alt="Cristian Safta" fetchpriority="high">
-    <nav class="contact" id="contact" aria-labelledby="contact-title">
-      <h2 class="visually-hidden" id="contact-title">Contact and CV</h2>
-      <ul class="link-list" role="list">
-        <li><a href="mailto:saftakrist@gmail.com">saftakrist@gmail.com</a></li>
-        <li><a href="https://github.com/CristianSafta">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/cristian-safta-4640a824a/">LinkedIn</a></li>
-        <li><a href="assets/cristian-safta-cv.pdf" download="Cristian-Safta-CV.pdf" aria-label="Download CV (PDF)">CV (PDF)</a></li>
-      </ul>
-    </nav>
+    <img class="portrait" src="assets/cristian-safta-portrait.webp" width="216" height="270" alt="Cristian Safta" fetchpriority="high">
+    <div class="header-links">
+      <nav class="contact" id="contact" aria-labelledby="contact-title">
+        <h2 class="visually-hidden" id="contact-title">Contact and CV</h2>
+        <ul class="link-list" role="list">
+          <li><a href="mailto:saftakrist@gmail.com">saftakrist@gmail.com</a></li>
+          <li><a href="https://github.com/CristianSafta">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/cristian-safta-4640a824a/">LinkedIn</a></li>
+          <li><a href="assets/cristian-safta-cv.pdf" download="Cristian-Safta-CV.pdf" aria-label="Download CV (PDF)">CV (PDF)</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Jump to section">
+        <ul class="link-list" role="list">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="page-width" id="main" tabindex="-1">
@@ -48,28 +56,62 @@
             <h3 class="entry-title">Hop!</h3>
             <p class="entry-context">Unity · <time datetime="2026-09">Sep 2026</time>–present</p>
           </div>
-          <p>I built Hop! in Unity and released the complete game on the Google Play Store. Players time each jump with one touch, unlock character skins as they beat their high scores, and can compete on a global leaderboard.</p>
-          <p style="margin-block-start: .375rem">I built the in-game shop with restorable in-app purchases, integrated rewarded ads and opt-in analytics, and implemented cloud saving with Google Play Games. I also published the privacy policy and terms of service and added consent controls in the app.</p>
+          <p>I built and released Hop!, a complete one-touch Unity platformer, on the Google Play Store. Players unlock character skins and can compete on a global leaderboard.</p>
+          <p>I implemented cloud saving with Google Play Games, opt-in analytics, rewarded ads, and a shop with restorable in-app purchases. I added in-app consent controls and published the privacy policy and terms of service.</p>
           <ul class="link-list" aria-label="Hop! project links" role="list">
             <li><a href="https://play.google.com/store/apps/details?id=com.hop.myapp">Hop! on Google Play</a></li>
           </ul>
-          <details class="entry-details">
+          <details class="entry-details" id="hop-gameplay">
             <summary>Watch gameplay (20 seconds)</summary>
             <figure class="project-video">
               <video controls playsinline preload="none" muted width="540" height="960" poster="assets/hop-gameplay.webp" aria-label="Hop! gameplay" aria-describedby="hop-video-description">
                 <source src="assets/hop-gameplay.mp4" type="video/mp4">
-                <a href="assets/hop-gameplay.mp4">Open the gameplay video (MP4)</a>
               </video>
-              <figcaption id="hop-video-description">The player jumps between platforms, earning consecutive perfect landings in the classic and neon courses.</figcaption>
+              <figcaption>
+                <span id="hop-video-description">The player jumps between platforms, earning consecutive perfect landings in the classic and neon courses.</span>
+                <a href="assets/hop-gameplay.mp4">Open MP4</a>
+              </figcaption>
             </figure>
           </details>
+        </li>
+        <li class="entry" id="home-assistant">
+          <div class="entry-heading">
+            <h3 class="entry-title">Home Assistant for Logi Options+</h3>
+            <p class="entry-context">Logitech · <time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          </div>
+          <p>My open-source C# plug-in reached 5,000+ installs in beta on the Logi Marketplace. It lets people control Home Assistant devices with Logitech buttons and dials, with automatic discovery and real-time state updates.</p>
+          <ul class="link-list" aria-label="Home Assistant project links" role="list">
+            <li><a href="https://www.logitech.com/blog/2026/03/03/how-i-created-a-smart-home-solution-using-the-mx-creative-console/">Logitech write-up</a></li>
+            <li><a href="https://github.com/Logitech/cto-HomeAssistantPlugin-OptionsPlus">Plug-in code</a></li>
+            <li><a href="https://marketplace.logi.com/plugin/HomeAssistant/en">Marketplace listing</a></li>
+          </ul>
+          <details class="entry-details">
+            <summary>See my console layout</summary>
+            <figure class="project-screenshot">
+              <img src="assets/home-assistant-console.webp" width="1627" height="925" alt="Logi Options+ shows MX Creative Console keys for lights, switches, and blinds alongside the Home Assistant action settings." loading="lazy" decoding="async">
+              <figcaption>I shared this setup in my <a href="https://community.home-assistant.io/t/control-home-assistant-lights-switches-from-your-logitech-mx-devices-options-plugin/980268">Home Assistant Community post</a>.</figcaption>
+            </figure>
+          </details>
+        </li>
+        <li class="entry" id="video-research">
+          <div class="entry-heading">
+            <h3 class="entry-title">Finding evidence in 13,022 videos</h3>
+            <p class="entry-context">EPFL &amp; Idiap · <time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          </div>
+          <p>I presented our paper as first author at ACM ICMR’s 2026 ICDAR workshop in Amsterdam. I built a retrieval-augmented generation pipeline to search French-language YouTube transcripts about the UN Sustainable Development Goals. Rewriting queries raised the model-judged score from 3.68 to 3.96 out of 5 across 15 questions.</p>
+          <ul class="link-list" aria-label="Video research links" role="list">
+            <li><a href="https://publications.idiap.ch/attachments/papers/2026/Bros_ICMR26-ICDAR_2026.pdf">Paper (PDF)</a></li>
+            <li><a href="assets/rag-semester-presentation.pdf">Semester slides (PDF)</a></li>
+            <li><a href="https://github.com/CristianSafta/RAG_pipeline">Pipeline code</a></li>
+            <li><a href="https://www.linkedin.com/posts/cristian-safta-4640a824a_rag-llm-informationretrieval-activity-7475834105776025601-zk_3">Conference recap</a></li>
+          </ul>
         </li>
         <li class="entry" id="screen-to-light">
           <div class="entry-heading">
             <h3 class="entry-title">Measuring screen-to-light latency</h3>
             <p class="entry-context">Logitech MSc thesis · <time datetime="2026">2026</time></p>
           </div>
-          <p>I built a Matter.js pipeline to drive smart lights from game visuals over Wi-Fi. Photosensor tests found that the lights’ power saving and firmware fades accounted for most of the delay.</p>
+          <p>I built a Matter.js pipeline to drive smart lights from game visuals over Wi-Fi. Packet captures and photosensor measurements showed that most of the delay occurred after commands left the PC.</p>
           <ul class="link-list" aria-label="Thesis links" role="list">
             <li><a href="https://www.researchgate.net/publication/413651607_Evaluating_a_JavaScript_Matter_Stack_for_Gaming_Room_Lighting_Control">Read the thesis</a></li>
           </ul>
@@ -94,38 +136,6 @@
             <p>I compared two runs per condition, generating background TCP traffic between a laptop and a phone on the same network. The longest observed response was 61 ms without congestion and 112.5 ms under load.</p>
           </details>
         </li>
-        <li class="entry" id="video-research">
-          <div class="entry-heading">
-            <h3 class="entry-title">Finding evidence in 13,022 videos</h3>
-            <p class="entry-context">EPFL &amp; Idiap · <time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
-          </div>
-          <p>I built a retrieval-augmented generation pipeline to study how French-language YouTube videos discuss the UN Sustainable Development Goals. Rephrasing questions before searching transcripts raised the benchmark score from 3.68 to 3.96 out of 5 across 15 questions. Source attribution remained the main bottleneck. I presented the first-author paper at ACM ICMR’s 2026 ICDAR workshop in Amsterdam.</p>
-          <ul class="link-list" aria-label="Video research links" role="list">
-            <li><a href="https://publications.idiap.ch/attachments/papers/2026/Bros_ICMR26-ICDAR_2026.pdf">Paper (PDF)</a></li>
-            <li><a href="assets/rag-semester-presentation.pdf">Semester slides (PDF)</a></li>
-            <li><a href="https://github.com/CristianSafta/RAG_pipeline">Pipeline code</a></li>
-            <li><a href="https://www.linkedin.com/posts/cristian-safta-4640a824a_rag-llm-informationretrieval-activity-7475834105776025601-zk_3">Conference recap</a></li>
-          </ul>
-        </li>
-        <li class="entry" id="home-assistant">
-          <div class="entry-heading">
-            <h3 class="entry-title">Home Assistant for Logi Options+</h3>
-            <p class="entry-context">Logitech · <time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
-          </div>
-          <p>I built an open-source C# plug-in that discovers Home Assistant devices and syncs their state in real time so Logitech buttons and dials can control them. The Marketplace beta reached 5,000+ installs.</p>
-          <ul class="link-list" aria-label="Home Assistant project links" role="list">
-            <li><a href="https://www.logitech.com/blog/2026/03/03/how-i-created-a-smart-home-solution-using-the-mx-creative-console/">Logitech write-up</a></li>
-            <li><a href="https://github.com/Logitech/cto-HomeAssistantPlugin-OptionsPlus">Plug-in code</a></li>
-            <li><a href="https://marketplace.logi.com/plugin/HomeAssistant/en">Marketplace listing</a></li>
-          </ul>
-          <details class="entry-details">
-            <summary>See my console layout</summary>
-            <figure class="project-screenshot">
-              <img src="assets/home-assistant-console.webp" width="1627" height="925" alt="Logi Options+ shows MX Creative Console keys for lights, switches, and blinds alongside the Home Assistant action settings." loading="lazy" decoding="async">
-              <figcaption>I shared this setup in my <a href="https://community.home-assistant.io/t/control-home-assistant-lights-switches-from-your-logitech-mx-devices-options-plugin/980268">Home Assistant Community post</a>.</figcaption>
-            </figure>
-          </details>
-        </li>
         <li class="entry" id="nfos">
           <div class="entry-heading">
             <h3 class="entry-title">Porting a passive network monitor to NFOS</h3>
@@ -133,7 +143,7 @@
           </div>
           <p>I ported PRADS, a passive real-time network monitor written in C, to the lab’s parallel network function runtime. I tested its main functionality on one and two cores and filed 11 runtime issues.</p>
           <ul class="link-list" aria-label="NFOS project links" role="list">
-            <li><a href="https://dslab.epfl.ch/pubs/nfos.pdf">NFOS paper (PDF)</a></li>
+            <li><a href="https://dslab.epfl.ch/pubs/nfos.pdf">The lab’s NFOS paper (PDF)</a></li>
           </ul>
         </li>
         <li class="entry" id="draw-your-path">
@@ -202,5 +212,14 @@
   <footer class="site-footer page-width">
     <a href="#top">Back to top</a>
   </footer>
+
+  <script>
+    const gameplayDisclosure = document.getElementById('hop-gameplay');
+    const gameplayVideo = gameplayDisclosure.querySelector('video');
+
+    gameplayDisclosure.addEventListener('toggle', () => {
+      if (!gameplayDisclosure.open) gameplayVideo.pause();
+    });
+  </script>
 </body>
 </html>
